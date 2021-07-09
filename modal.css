@@ -574,7 +574,9 @@ footer {
     opacity: 1;
   }
 }
-#erreur {
+.validateText {
   color: rgb(219, 25, 50);
   font-size: 0.6em;
+  height:20px;
+  margin-top:-6px;
 }

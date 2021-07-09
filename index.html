@@ -59,6 +59,7 @@
             <form
               name="reserve"
               action="index.html"
+              id="loginForm"
               method="get"
               onsubmit="return validate();"
             >
@@ -73,7 +74,8 @@
                   minlength="2"
                   novalidate
                 />
-                <br>
+                <p class="validateText "></p>
+                
               </div>
               <div
                 class="formData">
@@ -83,7 +85,9 @@
                   type="text"
                   id="last"
                   name="last"
-                /><br>
+                />
+                <p class="validateText"></p>
+              
               </div>
               <div
                 class="formData">
@@ -93,7 +97,9 @@
                   type="email"
                   id="email"
                   name="email"
-                /><br>
+                />
+                <p class="validateText"></p>
+                
               </div>
               <div
                 class="formData">
@@ -103,22 +109,26 @@
                   type="date"
                   id="birthdate"
                   name="birthdate"
-                /><br>
+                />
+                <p class="validateText"></p>
+              
               </div>
               <div
                 class="formData">
                 <label>À combien de tournois GameOn avez-vous déjà participé ?</label><br>
                 <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
+                <p class="validateText"></p>
               </div>
               <p class="text-label">Quelles villes ?</p>
               <div
                 class="formData">
                 <input
-                  class="checkbox-input"
+                  class="checkbox-input localisation"
                   type="radio"
                   id="location1"
                   name="location"
                   value="New York"
+                  checked
                 />
                 <label class="checkbox-label" for="location1">
                   <span class="checkbox-icon"></span>
@@ -179,6 +189,7 @@
                   <span class="checkbox-icon"></span>
                   Portland</label
                 >
+                <p class="validateText"></p>
               </div>
 
               <div
@@ -199,6 +210,7 @@
                   <span class="checkbox-icon"></span>
                   Je Je souhaite être prévenu des prochains évènements.
                 </label>
+                <p class="validateText validatecheckbox"></p>
                 <br>
               </div>
               <input
@@ -208,7 +220,6 @@
                 value="C'est parti"
               />
             </form>
-            <p id="erreur"></p>
           </div>
         </div>
       </div>
