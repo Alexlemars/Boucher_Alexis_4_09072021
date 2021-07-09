@@ -53,7 +53,7 @@ condition.addEventListener('change' , function(){
 const validFirstName = function(inputFirstName){
   let small = inputFirstName.nextElementSibling;
   if (inputFirstName.value.length < 2 ){
-    small.innerHTML = 'Le prenom doit contenir au moins 2 caracteres'
+    small.innerHTML = 'Veuillez entrer 2 caractères ou plus pour le champ du prenom.'
     return false;
   }else{
     small.innerHTML="";
@@ -65,7 +65,7 @@ const validFirstName = function(inputFirstName){
 const validLastName = function(inputLastName){
   let small = inputLastName.nextElementSibling;
   if (inputLastName.value.length < 2 ){
-    small.innerHTML = 'Le nom doit contenir au moins 2 caracteres'
+    small.innerHTML = 'Veuillez entrer 2 caractères ou plus pour le champ du nom.'
     return false;
   }else{
     small.innerHTML="";
@@ -82,7 +82,7 @@ const validEmail = function(inputEmail){
   let small = inputEmail.nextElementSibling;
 
   if(testEmail == false){
-    small.innerHTML = 'Adresse email non valide'
+    small.innerHTML = 'Adresse email non valide.'
     return false ;
   }else{
     small.innerHTML="";
@@ -97,7 +97,7 @@ const validBirthdate = function(inputBirthdate){
   let small = inputBirthdate.nextElementSibling;
 
   if(!/[0-9]/.test(inputBirthdate.value)){
-    small.innerHTML = "veuillez renseigner au moins 1 chiffre"
+    small.innerHTML = "Vous devez entrer votre date de naissance."
     return false;
   }else{
     small.innerHTML = "";
@@ -111,7 +111,7 @@ const validQuantity = function(inputQuantity){
   let small = inputQuantity.nextElementSibling;
   
   if(!/[0-9]/.test(inputQuantity.value)){
-    small.innerHTML = "veuillez renseigner au moins 1 chiffre"
+    small.innerHTML = "veuillez renseigner au moins 1 chiffre."
     return false
   }else{
     small.innerHTML = "";
@@ -124,7 +124,7 @@ const validQuantity = function(inputQuantity){
 
 const validCondition = function(inputCheckbox){
   if(inputCheckbox.checked == false){
-    textCheckBox.innerHTML = "veuillez cocher au moins une case";
+    textCheckBox.innerHTML = "Vous devez vérifier que vous acceptez les termes et conditions.";
     return false;
   }else{
     textCheckBox.innerHTML = "";
