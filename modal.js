@@ -21,7 +21,6 @@ const modalSubmit = document.querySelectorAll(".btn-submit");
 let form = document.getElementById("loginForm");
 let condition =document.getElementById("checkbox1")
 let textCheckBox = document.querySelector(".validatecheckbox");
-let textControl = document.querySelector("input");
 
 
 // Formulaire
@@ -151,7 +150,6 @@ function modalSub(e){
   if  (validFirstName(form.first) && validLastName(form.last) && validEmail(form.email) && validBirthdate(form.birthdate) && validQuantity(form.quantity) && validCondition(condition)){
     modalBgSubmit.style.display = "block"
     modalBg.style.display = "none"
-    textControl.value = "";
   }
 }
 
