@@ -619,7 +619,8 @@ footer {
 }
 .validateText {
   color: rgb(219, 25, 50);
-  font-size: 0.6em;
-  height:25px;
+  font-size: 0.5em;
+  font-weight: bold;
+  height:20px;
   margin-top:-6px;
 }
