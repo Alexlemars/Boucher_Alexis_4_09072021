@@ -94,9 +94,11 @@ const validEmail = function(inputEmail){
 //Validation Birtdate
 const validBirthdate = function(inputBirthdate){
   let small = inputBirthdate.nextElementSibling;
+  const birthregex = /^((19[3-9]+[0-9]|200[0-9])-(0?[1-9]|1[0-2])-(0?[1-9]|[12]\d|3[01])|(0?[1-9]|[12]\d|3[01])[/](0?[1-9]|1[0-2])[/](19[3-9]+[0-9]|200[0-6]))$/;
+  let testBirtdate = birthregex.test(inputBirthdate.value);
 
-  if(!/[0-9]/.test(inputBirthdate.value)){
-    small.innerHTML = "Vous devez entrer votre date de naissance."
+  if(testBirtdate == false){
+    small.innerHTML = "Vous devez entrer une date de naissance valide."
     return false;
   }else{
     small.innerHTML = "";
@@ -148,10 +150,18 @@ modalSubmit.forEach((btnSubmit) => btnSubmit.addEventListener("click",modalSub))
 function modalSub(e){
   e.preventDefault();
   if  (validFirstName(form.first) && validLastName(form.last) && validEmail(form.email) && validBirthdate(form.birthdate) && validQuantity(form.quantity) && validCondition(condition)){
-    modalBgSubmit.style.display = "block"
-    modalBg.style.display = "none"
+    modalBgSubmit.style.display = "block";
+    modalBg.style.display = "none";
+    form.reset();
   }
 }
+
+//reset modal form
+
+function resetForm(){
+  
+}
+
 
 //close modal 
 
