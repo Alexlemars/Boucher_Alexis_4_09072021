@@ -152,16 +152,11 @@ function modalSub(e){
   if  (validFirstName(form.first) && validLastName(form.last) && validEmail(form.email) && validBirthdate(form.birthdate) && validQuantity(form.quantity) && validCondition(condition)){
     modalBgSubmit.style.display = "block";
     modalBg.style.display = "none";
+
+    //reset modal form
     form.reset();
   }
 }
-
-//reset modal form
-
-function resetForm(){
-  
-}
-
 
 //close modal 
 

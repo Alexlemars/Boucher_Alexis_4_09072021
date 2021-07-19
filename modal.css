@@ -1,9 +1,8 @@
 :root {
-  --font-default: "DM Sans", Arial, Helvetica, sans-serif;
-  --font-slab: var(--font-default);
   --modal-duration: 0.8s;
 }
 * {
+  font-family:"DM Sans", Arial, Helvetica, sans-serif; ;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -576,21 +575,29 @@ footer {
 }
 @media screen and (max-width: 460px){
   .hero-text{
-    width:350px;
-    margin-top:-1px;
+    font-size: 0.6em;
+    width:346px;
+    margin-top:20px;
+  }
+  .hero-headline{
+    font-size: 1.5em;
+  }
+
+  .copyrights{
+    margin-top: -30px;
   }
 }
+
+
 @media screen and (max-width: 400px){
   .hero-headline{
-    font-size: 4rem;
     margin-top: -15px;
   }
   .hero-text{
     width:300px;
-    margin-top:-1px;
   }
   .hero-img img{
-    margin-top: -1px;
+    margin-top: 0px;
   }
   
 
@@ -600,11 +607,12 @@ footer {
     width:190px;
   }
   .hero-headline{
-    font-size: 3rem;
+    font-size: 1em;
     width:200px;
   }
   .hero-text{
     width:200px;
+    font-size: 0.5em;
   }
 }
 
